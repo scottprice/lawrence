@@ -1,0 +1,22 @@
+{
+  "name": "lawrence",
+  "version": "1.0.0",
+  "description": "Simple weather slack bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottprice/lawrence.git"
+  },
+  "author": "Scott Price",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottprice/lawrence/issues"
+  },
+  "homepage": "https://github.com/scottprice/lawrence#readme",
+  "dependencies": {
+    "botkit": "^0.2.2"
+  }
+}
