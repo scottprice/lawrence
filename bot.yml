@@ -6,3 +6,5 @@ config:
   - name: WEATHER_TOKEN
     friendly_name: Weather Underground Key
     info: API key for weather underground
+    type: secret
+    global: true
