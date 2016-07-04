@@ -1,0 +1,8 @@
+name: Lawrence the experimental bot
+author: Scott Price
+email: scottprice1@gmail.com
+description: Just an experimental bot to learn how they work.
+config:
+  - name: WEATHER_TOKEN
+    friendly_name: Weather Underground Key
+    info: API key for weather underground
