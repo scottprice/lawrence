@@ -7,6 +7,7 @@ if (!process.env.SLACK_TOKEN || !process.env.WEATHER_TOKEN) {
 var Botkit = require('botkit');
 var request = require('request');
 var weatherResponse;
+var weatherToken = process.env.WEATHER_TOKEN;
 var controller = Botkit.slackbot({
   debug: false
 });
@@ -14,6 +15,7 @@ var controller = Botkit.slackbot({
 var bot = controller.spawn({
     token: process.env.SLACK_TOKEN
 }).startRTM();
+
 
 controller.hears('hello',['direct_message','direct_mention','mention', 'ambient'],function(bot,message) {
 
@@ -25,7 +27,7 @@ controller.hears('weather',['direct_message','direct_mention','mention', 'ambien
 
   var options = {
     method: 'GET',
-    url: 'http://api.wunderground.com/api/f51924835a70f440/conditions/q/ga/ball_ground.json',
+    url: 'http://api.wunderground.com/api/' + weatherToken + '/conditions/q/ga/ball_ground.json',
     headers: {
       'postman-token': '3ac85f00-f4af-738c-4f69-2c355c09eb38',
       'cache-control': 'no-cache' }
